@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Widget</title>
+    <style>
+        body { 
+            text-align: center; 
+            font-family: Arial, sans-serif; 
+            background: #f4f4f4; 
+        }
+        .widget-box { 
+            padding: 20px; 
+            border: 2px solid #000; 
+            background: white; 
+            width: 200px; 
+            margin: auto; 
+            border-radius: 10px; 
+        }
+        .widget-button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            background: #007BFF; 
+            color: white; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        }
+        .widget-button:hover { 
+            background: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-box">
+        <h3>Click the Button</h3>
+        <button class="widget-button" onclick="changeColor()">Click Me</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            document.querySelector(".widget-button").style.background = 
+                "#" + Math.floor(Math.random()*16777215).toString(16);
+        }
+    </script>
+</body>
+</html>
